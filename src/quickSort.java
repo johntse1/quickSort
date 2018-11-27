@@ -25,6 +25,5 @@ public class quickSort
         }
         arr[i+1] = arr[right];
         return i+1;
-
     }
 }
