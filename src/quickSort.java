@@ -1,5 +1,14 @@
 public class quickSort
 {
+    private int[] arr;
+    private int left;
+    private int right;
+    public quickSort(int[] test1, int left, int right)
+    {
+        this.left = left;
+        this.right = right;
+    }
+
     public void quickSort(int[] arr, int left, int right)
     {
         if(left<right)
@@ -8,6 +17,7 @@ public class quickSort
             quickSort(arr,left,pivot-1);
             quickSort(arr,pivot+1,right);
         }
+        this.arr = arr;
     }
     public int partition(int[] arr, int left, int right)
     {
@@ -25,5 +35,14 @@ public class quickSort
         }
         arr[i+1] = arr[right];
         return i+1;
+    }
+    public String toString()
+    {
+        String str = "";
+        for(int j = 0; j<arr.length;j++)
+        {
+            str+= arr[j];
+        }
+        return str;
     }
 }
